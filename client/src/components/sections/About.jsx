@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import Section from '../common/Section';
-import { personalInfo, statistics } from '../../data/personal';
+import { personalInfo, statistics } from '../../data/personal.js';
 import { FaBriefcase, FaCode, FaTools, FaGithub, FaRocket, FaLightbulb, FaHeart } from 'react-icons/fa';
 
 const iconMap = {

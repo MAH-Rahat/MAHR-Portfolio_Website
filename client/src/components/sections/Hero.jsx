@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaEnvelope, FaDownload, FaRobot, FaBrain, FaCode } from 'react-icons/fa';
-import { personalInfo } from '../../data/personal';
+import { personalInfo } from '../../data/personal.js';
 import Button from '../common/Button';
 import TypingAnimation from '../effects/TypingAnimation';
 import profileImage from '../../assets/images/profile.png';

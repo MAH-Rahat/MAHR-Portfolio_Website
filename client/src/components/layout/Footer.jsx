@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { FaLinkedin, FaGithub, FaEnvelope, FaHeart, FaArrowUp, FaCode, FaRocket } from 'react-icons/fa';
-import { personalInfo } from '../../data/personal';
+import { personalInfo } from '../../data/personal.js';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();

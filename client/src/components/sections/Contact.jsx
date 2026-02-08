@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { FaEnvelope, FaPhone, FaLinkedin, FaGithub, FaPaperPlane, FaMapMarkerAlt, FaCheckCircle } from 'react-icons/fa';
 import Section from '../common/Section';
 import Button from '../common/Button';
-import { personalInfo } from '../../data/personal';
+import { personalInfo } from '../../data/personal.js';
 import { contactAPI } from '../../services/api';
 
 const Contact = () => {
