@@ -33,10 +33,72 @@
     min-height: 100vh;
   }
 
+  /* Responsive font sizes for all devices */
+  @media (max-width: 480px) {
+    html {
+      font-size: 14px;
+    }
+  }
+
+  @media (min-width: 481px) and (max-width: 768px) {
+    html {
+      font-size: 15px;
+    }
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    html {
+      font-size: 16px;
+    }
+  }
+
+  @media (min-width: 1025px) and (max-width: 1440px) {
+    html {
+      font-size: 16px;
+    }
+  }
+
+  @media (min-width: 1441px) {
+    html {
+      font-size: 18px;
+    }
+  }
+
   /* Mobile-specific optimizations */
   @media (max-width: 640px) {
     html {
       font-size: 14px;
+    }
+    
+    body {
+      font-size: 0.875rem;
+    }
+  }
+
+  @media (min-width: 641px) and (max-width: 768px) {
+    html {
+      font-size: 15px;
+    }
+  }
+
+  /* Tablet optimizations */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    html {
+      font-size: 16px;
+    }
+  }
+
+  /* Desktop optimizations */
+  @media (min-width: 1025px) {
+    html {
+      font-size: 16px;
+    }
+  }
+
+  /* Large desktop optimizations */
+  @media (min-width: 1920px) {
+    html {
+      font-size: 18px;
     }
   }
 
@@ -74,6 +136,47 @@
 
 @layer components {
   /* Custom component styles will go here */
+  .container-responsive {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .container-responsive {
+      max-width: 640px;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .container-responsive {
+      max-width: 768px;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container-responsive {
+      max-width: 1024px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .container-responsive {
+      max-width: 1280px;
+    }
+  }
+
+  @media (min-width: 1536px) {
+    .container-responsive {
+      max-width: 1536px;
+    }
+  }
 }
 
 @layer utilities {
