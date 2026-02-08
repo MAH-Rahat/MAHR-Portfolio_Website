@@ -1,8 +1,8 @@
 const HolographicOverlay = ({ intensity = 'low' }) => {
   const intensityMap = {
-    low: 0.02,
-    medium: 0.05,
-    high: 0.08
+    low: 0.01,
+    medium: 0.03,
+    high: 0.05
   };
 
   const opacityValue = intensityMap[intensity] || intensityMap.low;
@@ -30,7 +30,7 @@ const HolographicOverlay = ({ intensity = 'low' }) => {
       <div
         className="fixed inset-0 pointer-events-none z-5"
         style={{
-          background: `
+          backgroundImage: `
             repeating-linear-gradient(
               0deg,
               transparent,

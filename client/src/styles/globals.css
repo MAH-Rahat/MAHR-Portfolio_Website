@@ -18,6 +18,31 @@
     height: 100%;
   }
 
+  /* Responsive base font sizes for better scaling */
+  @media (max-width: 640px) {
+    html {
+      font-size: 14px;
+    }
+  }
+
+  @media (min-width: 641px) and (max-width: 1024px) {
+    html {
+      font-size: 15px;
+    }
+  }
+
+  @media (min-width: 1025px) and (max-width: 1440px) {
+    html {
+      font-size: 15px;
+    }
+  }
+
+  @media (min-width: 1441px) {
+    html {
+      font-size: 16px;
+    }
+  }
+
   body {
     @apply bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
@@ -31,6 +56,11 @@
   #root {
     width: 100%;
     min-height: 100vh;
+  }
+
+  /* Ensure sections don't overlap with fixed navbar */
+  section {
+    scroll-margin-top: 4rem;
   }
 
   /* Mobile-specific optimizations */

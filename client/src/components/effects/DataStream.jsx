@@ -19,7 +19,7 @@ const DataStream = ({ position = 'left', speed = 1 }) => {
       const line = document.createElement('div');
       line.className = 'data-line absolute text-xs font-mono whitespace-nowrap';
       line.style.cssText = `
-        color: rgba(34, 211, 238, ${Math.random() * 0.5 + 0.3});
+        color: rgba(34, 211, 238, ${Math.random() * 0.15 + 0.05});
         top: ${Math.random() * 100}%;
         animation: streamData ${20 / speed}s linear infinite;
         animation-delay: ${Math.random() * -20}s;

@@ -41,11 +41,11 @@ const FloatingActionButton = () => {
   return (
     <>
       {/* Floating Action Button */}
-      <div className="fixed bottom-6 left-6 z-[9999]">
+      <div className="fixed bottom-4 left-4 sm:bottom-6 sm:left-6 z-[9998]">
         <AnimatePresence>
           {isOpen && (
             <motion.div
-              className="absolute bottom-16 left-0 space-y-3 z-[9999]"
+              className="absolute bottom-14 sm:bottom-16 left-0 space-y-2 sm:space-y-3 z-[9998]"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 20 }}
@@ -54,7 +54,7 @@ const FloatingActionButton = () => {
                 <motion.button
                   key={action.label}
                   onClick={action.onClick}
-                  className={`flex items-center gap-3 px-4 py-3 bg-gradient-to-r ${action.color} text-white rounded-full shadow-lg hover:shadow-xl transition-all group cursor-pointer`}
+                  className={`flex items-center gap-2 sm:gap-3 px-3 py-2 sm:px-4 sm:py-3 bg-gradient-to-r ${action.color} text-white rounded-full shadow-lg hover:shadow-xl transition-all group cursor-pointer text-sm sm:text-base`}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -20 }}
@@ -62,7 +62,7 @@ const FloatingActionButton = () => {
                   whileHover={{ scale: 1.05, x: 5 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <action.icon className="text-xl" />
+                  <action.icon className="text-base sm:text-xl" />
                   <span className="font-medium whitespace-nowrap">{action.label}</span>
                 </motion.button>
               ))}
@@ -73,14 +73,14 @@ const FloatingActionButton = () => {
         {/* Main Button */}
         <motion.button
           onClick={() => setIsOpen(!isOpen)}
-          className={`w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg hover:shadow-xl transition-all flex items-center justify-center cursor-pointer relative z-[9999] ${
+          className={`w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg hover:shadow-xl transition-all flex items-center justify-center cursor-pointer relative z-[9998] ${
             isOpen ? 'rotate-45' : ''
           }`}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           animate={{ rotate: isOpen ? 45 : 0 }}
         >
-          {isOpen ? <FaTimes className="text-2xl" /> : <FaRocket className="text-2xl" />}
+          {isOpen ? <FaTimes className="text-xl sm:text-2xl" /> : <FaRocket className="text-xl sm:text-2xl" />}
         </motion.button>
 
         {/* Pulse ring */}

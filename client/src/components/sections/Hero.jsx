@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaEnvelope, FaDownload, FaRobot, FaBrain, FaCode } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope, FaDownload, FaRobot, FaBrain } from 'react-icons/fa';
 import { personalInfo } from '../../data/personal.js';
 import Button from '../common/Button';
 import TypingAnimation from '../effects/TypingAnimation';
@@ -11,12 +11,12 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-blue-900/20 dark:to-purple-900/20 py-20 md:py-0">
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-blue-900/20 dark:to-purple-900/20 pt-20 sm:pt-16 pb-20">
       {/* Grid Pattern Overlay */}
       <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 items-center max-w-6xl mx-auto">
           {/* Profile Picture - Left Side on Desktop, Top on Mobile */}
           <motion.div
             className="flex justify-center lg:justify-end order-1 lg:order-1"
@@ -39,7 +39,7 @@ const Hero = () => {
               
               {/* Profile Image Container */}
               <motion.div
-                className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-8 border-white dark:border-gray-800 shadow-2xl"
+                className="relative w-40 h-40 sm:w-48 sm:h-48 md:w-52 md:h-52 lg:w-56 lg:h-56 rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-2xl"
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
               >
@@ -57,14 +57,14 @@ const Hero = () => {
 
               {/* Floating badges */}
               <motion.div
-                className="absolute -top-4 -right-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg"
+                className="absolute -top-3 left-1/2 -translate-x-1/2 sm:left-auto sm:translate-x-0 sm:-right-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white px-2 py-0.5 rounded-full text-[10px] sm:text-xs font-bold shadow-lg whitespace-nowrap"
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 2, repeat: Infinity }}
               >
                 🚀 Available
               </motion.div>
               <motion.div
-                className="absolute -bottom-4 -left-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg"
+                className="absolute -bottom-3 -left-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-2 py-1 rounded-full text-xs font-bold shadow-lg"
                 animate={{ y: [0, 10, 0] }}
                 transition={{ duration: 2.5, repeat: Infinity }}
               >
@@ -93,7 +93,7 @@ const Hero = () => {
 
             {/* Greeting */}
             <motion.p
-              className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-3 sm:mb-4 font-mono"
+              className="text-xs sm:text-sm md:text-base text-gray-600 dark:text-gray-300 mb-1 font-mono"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
@@ -103,7 +103,7 @@ const Hero = () => {
 
             {/* Name with Gradient */}
             <motion.h1
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 relative"
+              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold -mt-1 mb-0 relative"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
@@ -115,7 +115,7 @@ const Hero = () => {
 
             {/* Typing Animation for Roles */}
             <motion.div
-              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-6 sm:mb-8 flex flex-wrap items-baseline justify-center lg:justify-start gap-x-2 sm:gap-x-3"
+              className="text-sm sm:text-base md:text-lg lg:text-xl font-semibold mb-3 md:mb-4 flex flex-wrap items-baseline justify-center lg:justify-start gap-x-1.5 -mt-2"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
@@ -128,7 +128,7 @@ const Hero = () => {
 
             {/* Enhanced Bio with Tech Keywords */}
             <motion.div
-              className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-8 sm:mb-12 space-y-3 sm:space-y-4"
+              className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 mb-4 md:mb-6 space-y-1"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
@@ -138,7 +138,7 @@ const Hero = () => {
                 <span className="text-purple-600 dark:text-purple-400 font-semibold"> Deep Learning</span>, and 
                 <span className="text-pink-600 dark:text-pink-400 font-semibold"> Full-Stack Development</span>.
               </p>
-              <p className="text-sm sm:text-base md:text-lg">
+              <p className="text-xs">
                 Building intelligent solutions with <span className="font-mono text-primary-600 dark:text-primary-400">Python</span>, 
                 <span className="font-mono text-primary-600 dark:text-primary-400"> TensorFlow</span>, 
                 <span className="font-mono text-primary-600 dark:text-primary-400"> PyTorch</span>, 
@@ -149,7 +149,7 @@ const Hero = () => {
 
             {/* Tech Stack Badges */}
             <motion.div
-              className="flex flex-wrap justify-center lg:justify-start gap-2 sm:gap-3 mb-8 sm:mb-12"
+              className="flex flex-wrap justify-center lg:justify-start gap-1.5 mb-4 md:mb-6"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
@@ -157,7 +157,7 @@ const Hero = () => {
               {['AI/ML', 'Computer Vision', 'Deep Learning', 'MERN Stack', 'Cloud Computing'].map((tech, index) => (
                 <motion.span
                   key={tech}
-                  className="px-3 sm:px-4 py-1.5 sm:py-2 bg-gradient-to-r from-blue-500/10 to-purple-500/10 dark:from-blue-500/20 dark:to-purple-500/20 border border-blue-500/20 dark:border-blue-500/30 rounded-full text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300"
+                  className="px-2 py-1 bg-gradient-to-r from-blue-500/10 to-purple-500/10 dark:from-blue-500/20 dark:to-purple-500/20 border border-blue-500/20 dark:border-blue-500/30 rounded-full text-xs font-medium text-gray-700 dark:text-gray-300"
                   whileHover={{ scale: 1.05, y: -2 }}
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -170,7 +170,7 @@ const Hero = () => {
 
             {/* CTA Buttons - Responsive */}
             <motion.div
-              className="flex flex-col sm:flex-row flex-wrap justify-center lg:justify-start gap-3 sm:gap-4 mb-8 sm:mb-12"
+              className="flex flex-col sm:flex-row flex-wrap justify-center lg:justify-start gap-2 mb-5 md:mb-6"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
@@ -178,9 +178,9 @@ const Hero = () => {
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full sm:w-auto">
                 <Button
                   variant="primary"
-                  size="lg"
+                  size="md"
                   onClick={() => scrollToSection('projects')}
-                  className="shadow-lg shadow-primary-500/50 w-full sm:w-auto"
+                  className="shadow-lg shadow-primary-500/50 w-full sm:w-auto text-sm"
                 >
                   🚀 View Projects
                 </Button>
@@ -188,9 +188,9 @@ const Hero = () => {
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full sm:w-auto">
                 <Button
                   variant="outline"
-                  size="lg"
+                  size="md"
                   onClick={() => scrollToSection('contact')}
-                  className="w-full sm:w-auto"
+                  className="w-full sm:w-auto text-sm"
                 >
                   💬 Contact Me
                 </Button>
@@ -198,10 +198,10 @@ const Hero = () => {
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full sm:w-auto">
                 <Button
                   variant="ghost"
-                  size="lg"
+                  size="md"
                   icon={<FaDownload />}
-                  onClick={() => window.open(personalInfo.resumeUrl, '_blank')}
-                  className="w-full sm:w-auto"
+                  onClick={() => window.open('https://drive.google.com/file/d/1lREdDZvqfXJrzQfXIKr_3Hz8lHWIWiZA/view?usp=drive_open', '_blank')}
+                  className="w-full sm:w-auto text-sm"
                 >
                   Download Resume
                 </Button>
@@ -210,7 +210,7 @@ const Hero = () => {
 
             {/* Social Links with Hover Effects */}
             <motion.div
-              className="flex justify-center lg:justify-start space-x-4 sm:space-x-6"
+              className="flex justify-center lg:justify-start space-x-4"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.7 }}
@@ -233,7 +233,7 @@ const Hero = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.8 + index * 0.1 }}
                 >
-                  <social.icon size={28} className="sm:w-8 sm:h-8" />
+                  <social.icon size={22} />
                 </motion.a>
               ))}
             </motion.div>
@@ -241,17 +241,17 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Animated Scroll Indicator */}
+      {/* Animated Scroll Indicator - Hidden on small screens to avoid overlap */}
       <motion.div
-        className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2"
+        className="hidden sm:flex absolute bottom-6 left-1/2 transform -translate-x-1/2 z-20"
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 1.5, repeat: Infinity }}
       >
-        <div className="flex flex-col items-center gap-2">
-          <span className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 font-mono">scroll down</span>
-          <div className="w-5 h-8 sm:w-6 sm:h-10 border-2 border-gray-400 dark:border-gray-600 rounded-full flex justify-center p-1.5 sm:p-2">
+        <div className="flex flex-col items-center gap-1">
+          <span className="text-xs text-gray-500 dark:text-gray-400 font-mono">scroll down</span>
+          <div className="w-5 h-8 border-2 border-gray-400 dark:border-gray-600 rounded-full flex justify-center p-1.5">
             <motion.div
-              className="w-1 h-1 sm:w-1.5 sm:h-1.5 bg-primary-600 dark:bg-primary-400 rounded-full"
+              className="w-1 h-1 bg-primary-600 dark:bg-primary-400 rounded-full"
               animate={{ y: [0, 10, 0] }}
               transition={{ duration: 1.5, repeat: Infinity }}
             />

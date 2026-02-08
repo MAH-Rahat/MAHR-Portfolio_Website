@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaLinkedin, FaGithub, FaEnvelope, FaHeart, FaArrowUp, FaCode, FaRocket } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaEnvelope, FaArrowUp, FaCode, FaRocket } from 'react-icons/fa';
 import { personalInfo } from '../../data/personal.js';
 
 const Footer = () => {
@@ -47,7 +47,7 @@ const Footer = () => {
               whileHover={{ x: 5 }}
             >
               <FaCode className="text-primary-400" />
-              MAH Rahat
+              AH Rahat
             </motion.h3>
             <p className="text-gray-400 mb-4 leading-relaxed">
               Full-Stack AI Engineer specializing in <span className="text-primary-400 font-semibold">Computer Vision</span> and <span className="text-secondary-400 font-semibold">Machine Learning</span>.
@@ -159,20 +159,12 @@ const Footer = () => {
           {/* Copyright */}
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-gray-400 text-sm">
             <motion.p 
-              className="flex items-center justify-center gap-2"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
             >
-              © {currentYear} MAH Rahat. Made with{' '}
-              <motion.span
-                animate={{ scale: [1, 1.2, 1] }}
-                transition={{ duration: 1, repeat: Infinity, repeatDelay: 1 }}
-              >
-                <FaHeart className="text-red-500" />
-              </motion.span>
-              {' '}and React
+              © {currentYear} AH Rahat. All rights reserved.
             </motion.p>
             
             <motion.div 

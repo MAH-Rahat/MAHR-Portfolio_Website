@@ -23,24 +23,24 @@ const Section = ({
     <section
       id={id}
       ref={targetRef}
-      className={`py-12 sm:py-16 md:py-20 ${backgrounds[background]} ${className}`}
+      className={`py-12 sm:py-16 md:py-20 scroll-mt-16 ${backgrounds[background]} ${className}`}
       {...props}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {(title || subtitle) && (
           <motion.div
-            className="text-center mb-8 sm:mb-10 md:mb-12"
+            className="text-center mb-6 sm:mb-8 md:mb-10"
             initial={{ opacity: 0, y: 20 }}
             animate={hasIntersected ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
           >
             {title && (
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4 px-4">
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-2 sm:mb-3 px-4">
                 {title}
               </h2>
             )}
             {subtitle && (
-              <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto px-4">
+              <p className="text-xs sm:text-sm md:text-base text-gray-600 dark:text-gray-300 max-w-2xl mx-auto px-4">
                 {subtitle}
               </p>
             )}

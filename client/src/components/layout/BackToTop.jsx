@@ -26,7 +26,7 @@ const BackToTop = () => {
       {isVisible && (
         <motion.button
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 p-4 bg-primary-600 hover:bg-primary-700 text-white rounded-full shadow-lg z-40"
+          className="fixed bottom-24 right-4 sm:bottom-24 sm:right-6 p-3 sm:p-4 bg-primary-600 hover:bg-primary-700 text-white rounded-full shadow-lg z-40"
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0 }}
@@ -34,7 +34,7 @@ const BackToTop = () => {
           whileTap={{ scale: 0.9 }}
           aria-label="Back to top"
         >
-          <FaArrowUp size={20} />
+          <FaArrowUp size={18} className="sm:w-5 sm:h-5" />
         </motion.button>
       )}
     </AnimatePresence>

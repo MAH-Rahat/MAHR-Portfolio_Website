@@ -28,11 +28,13 @@ const HolographicCard = ({ children, className = '' }) => {
       {/* Holographic gradient overlay */}
       <motion.div
         className="absolute inset-0 opacity-0 pointer-events-none"
-        animate={{
-          opacity: isHovering ? 0.3 : 0,
+        style={{
           background: isHovering
             ? `radial-gradient(circle at ${mousePosition.x * 100}% ${mousePosition.y * 100}%, rgba(59, 130, 246, 0.4), transparent 50%)`
-            : 'transparent',
+            : 'radial-gradient(circle at 50% 50%, transparent, transparent)',
+        }}
+        animate={{
+          opacity: isHovering ? 0.3 : 0,
         }}
         transition={{ duration: 0.2 }}
       />

@@ -26,11 +26,11 @@ function App() {
   return (
     <ErrorBoundary>
       <ThemeProvider>
-        <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300 relative">
-          {/* AI Background Effects - Layered for depth */}
-          <CircuitBoard opacity={0.08} lineColor="#22d3ee" />
-          <MatrixRain density={0.3} speed={1} opacity={0.1} />
-          <NeuralNetwork nodeCount={25} connectionOpacity={0.15} />
+        <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300 relative overflow-x-hidden">
+          {/* AI Background Effects - Layered for depth with very low opacity */}
+          <CircuitBoard opacity={0.02} lineColor="#22d3ee" />
+          <MatrixRain density={0.3} speed={1} opacity={0.03} />
+          <NeuralNetwork nodeCount={25} connectionOpacity={0.05} />
           <HolographicOverlay intensity="low" />
           <DataStream position="left" speed={1.5} />
           <DataStream position="right" speed={1.2} />
