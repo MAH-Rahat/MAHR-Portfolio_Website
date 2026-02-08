@@ -8,6 +8,10 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    zoom: 1;
   }
 
   body {
@@ -15,6 +19,9 @@
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     min-height: 100vh;
     overflow-x: hidden;
+    zoom: 1;
+    transform: scale(1);
+    transform-origin: top left;
   }
 
   /* Mobile-specific optimizations */
