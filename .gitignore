@@ -41,7 +41,8 @@ Thumbs.db
 .tmp/
 
 # MongoDB
-data/
+/data/
+server/data/
 
 # Build files
 *.tsbuildinfo
