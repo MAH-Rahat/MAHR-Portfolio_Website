@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaSun, FaMoon, FaBars, FaTimes, FaCode } from 'react-icons/fa';
+import { FaSun, FaMoon, FaBars, FaTimes, FaBrain } from 'react-icons/fa';
 import { useTheme } from '../../contexts/ThemeContext';
 import { NAV_SECTIONS } from '../../utils/constants';
 
@@ -63,15 +63,38 @@ const Navigation = () => {
             whileTap={{ scale: 0.95 }}
           >
             <motion.div
-              className="text-primary-600 dark:text-primary-400"
-              animate={{ rotate: 360 }}
-              transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+              className="relative"
+              whileHover={{ scale: 1.1 }}
             >
-              <FaCode />
+              {/* AI Brain Icon with glow effect */}
+              <motion.div
+                className="text-primary-600 dark:text-primary-400 relative"
+                animate={{ 
+                  filter: [
+                    'drop-shadow(0 0 2px rgba(59, 130, 246, 0.5))',
+                    'drop-shadow(0 0 8px rgba(59, 130, 246, 0.8))',
+                    'drop-shadow(0 0 2px rgba(59, 130, 246, 0.5))'
+                  ]
+                }}
+                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+              >
+                <FaBrain size={28} />
+              </motion.div>
+              {/* Pulse ring */}
+              <motion.div
+                className="absolute inset-0 rounded-full bg-primary-500/20"
+                animate={{ scale: [1, 1.5, 1], opacity: [0.5, 0, 0.5] }}
+                transition={{ duration: 2, repeat: Infinity }}
+              />
             </motion.div>
-            <span className="bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent">
-              MAH Rahat
-            </span>
+            <div className="flex flex-col leading-tight">
+              <span className="bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent text-xl">
+                AH Rahat
+              </span>
+              <span className="text-[10px] text-gray-500 dark:text-gray-400 font-normal tracking-wider">
+                AI ENGINEER
+              </span>
+            </div>
           </motion.div>
 
           {/* Desktop Navigation */}

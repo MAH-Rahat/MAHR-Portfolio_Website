@@ -14,14 +14,13 @@ import BackToTop from './components/layout/BackToTop';
 import ErrorBoundary from './components/common/ErrorBoundary';
 import MatrixRain from './components/effects/MatrixRain';
 import NeuralNetwork from './components/effects/NeuralNetwork';
-import AITerminal from './components/effects/AITerminal';
 import FloatingActionButton from './components/common/FloatingActionButton';
-import SimpleGameButton from './components/common/SimpleGameButton';
 import DataStream from './components/effects/DataStream';
 import CircuitBoard from './components/effects/CircuitBoard';
 import EasterEggs from './components/effects/EasterEggs';
 import HolographicOverlay from './components/effects/HolographicOverlay';
 import AchievementTracker from './components/effects/AchievementTracker';
+import AIChatbot from './components/chat/AIChatbot';
 
 function App() {
   return (
@@ -53,20 +52,17 @@ function App() {
           <Footer />
           <BackToTop />
           
-          {/* AI Terminal Widget */}
-          <AITerminal />
-          
           {/* Floating Action Button with Game */}
           <FloatingActionButton />
-          
-          {/* Simple Game Button (Backup) */}
-          <SimpleGameButton />
           
           {/* Easter Eggs */}
           <EasterEggs />
           
           {/* Achievement Tracker */}
           <AchievementTracker />
+          
+          {/* AI Chatbot */}
+          <AIChatbot />
         </div>
       </ThemeProvider>
     </ErrorBoundary>

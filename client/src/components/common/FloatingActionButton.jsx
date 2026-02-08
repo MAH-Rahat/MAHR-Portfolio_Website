@@ -41,7 +41,7 @@ const FloatingActionButton = () => {
   return (
     <>
       {/* Floating Action Button */}
-      <div className="fixed bottom-20 sm:bottom-24 left-4 sm:left-8 z-[9999]">
+      <div className="fixed bottom-6 left-6 z-[9999]">
         <AnimatePresence>
           {isOpen && (
             <motion.div
@@ -73,7 +73,7 @@ const FloatingActionButton = () => {
         {/* Main Button */}
         <motion.button
           onClick={() => setIsOpen(!isOpen)}
-          className={`w-14 h-14 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg hover:shadow-xl transition-all flex items-center justify-center cursor-pointer relative z-[9999] ${
+          className={`w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg hover:shadow-xl transition-all flex items-center justify-center cursor-pointer relative z-[9999] ${
             isOpen ? 'rotate-45' : ''
           }`}
           whileHover={{ scale: 1.1 }}

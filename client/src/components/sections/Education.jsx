@@ -90,7 +90,6 @@ const Education = () => {
                       viewport={{ once: true }}
                       transition={{ delay: 0.5, type: "spring" }}
                       animate={{ y: [0, -3, 0] }}
-                      transition={{ duration: 2, repeat: Infinity }}
                     >
                       Current
                     </motion.div>
