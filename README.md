@@ -1,6 +1,6 @@
-# 🎨 MAH Rahat Portfolio Website
+# 🎨 AH Rahat Portfolio Website
 
-Modern, animated portfolio website for MAH Rahat - Full-Stack AI Engineer & Computer Vision Specialist.
+Modern, animated portfolio website for AH Rahat - Full-Stack AI Engineer & Computer Vision Specialist.
 
 [![React](https://img.shields.io/badge/React-18+-61DAFB?logo=react)](https://reactjs.org/)
 [![Node.js](https://img.shields.io/badge/Node.js-18+-339933?logo=node.js)](https://nodejs.org/)
@@ -18,7 +18,8 @@ Modern, animated portfolio website for MAH Rahat - Full-Stack AI Engineer & Comp
 - ♿ **Accessible** - Semantic HTML, ARIA labels, keyboard navigation
 - 🚀 **Fast Performance** - Optimized loading and code splitting
 - 🔗 **GitHub Integration** - Live stats from GitHub API
-- 🎯 **Project Showcase** - Filterable project gallery
+- 🎯 **Project Showcase** - Enhanced visual effects and animations
+- 🎮 **Interactive Game** - Hidden Snake game accessible via rocket button
 
 ## 📸 Preview
 
@@ -81,7 +82,7 @@ VITE_GITHUB_USERNAME=MAH-Rahat
 PORT=5000
 NODE_ENV=development
 MONGODB_URI=your_mongodb_connection_string
-EMAIL_USER=your_gmail@gmail.com
+EMAIL_USER=ashrafulhossainrahat@gmail.com
 EMAIL_PASSWORD=your_gmail_app_password
 CLIENT_URL=http://localhost:5173
 ```
@@ -99,8 +100,8 @@ Visit:
 
 ## 👨‍💻 Author
 
-**MAH Rahat (Ashraful Hossain Rahat)**
-- Email: ahrahat.cse@gmail.com
+**AH Rahat (Ashraful Hossain Rahat)**
+- Email: ashrafulhossainrahat@gmail.com
 - LinkedIn: [linkedin.com/in/ah-rahat](https://linkedin.com/in/ah-rahat)
 - GitHub: [github.com/MAH-Rahat](https://github.com/MAH-Rahat)
 
@@ -187,4 +188,4 @@ Built with React, Vite, Tailwind CSS, Framer Motion, Express, and MongoDB.
 
 ---
 
-**Made with ❤️ by MAH Rahat**
+**Made with ❤️ by AH Rahat**
