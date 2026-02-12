@@ -396,3 +396,22 @@
     transform: rotate(0) scale(1);
   }
 }
+
+
+/* Performance optimizations for smooth scrolling */
+canvas, video, iframe {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* GPU acceleration for animations */
+.motion-div, [class*="motion-"] {
+  will-change: transform, opacity;
+  transform: translateZ(0);
+}
+
+/* Optimize fixed elements */
+.fixed {
+  will-change: transform;
+  transform: translateZ(0);
+}

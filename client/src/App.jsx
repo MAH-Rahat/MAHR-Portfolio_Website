@@ -27,13 +27,10 @@ function App() {
     <ErrorBoundary>
       <ThemeProvider>
         <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300 relative overflow-x-hidden">
-          {/* AI Background Effects - Layered for depth with very low opacity */}
+          {/* Reduced AI Background Effects for better performance */}
           <CircuitBoard opacity={0.02} lineColor="#22d3ee" />
-          <MatrixRain density={0.3} speed={1} opacity={0.03} />
-          <NeuralNetwork nodeCount={25} connectionOpacity={0.05} />
+          <MatrixRain density={0.2} speed={1} opacity={0.03} />
           <HolographicOverlay intensity="low" />
-          <DataStream position="left" speed={1.5} />
-          <DataStream position="right" speed={1.2} />
           
           <ScrollProgressBar />
           <Navigation />
