@@ -46,3 +46,8 @@ server/data/
 
 # Build files
 *.tsbuildinfo
+
+# Documentation and spec files
+*.md
+!README.md
+.kiro/
